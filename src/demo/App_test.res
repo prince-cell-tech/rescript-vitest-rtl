@@ -63,9 +63,7 @@ Vitest.describe("App", () => {
 
   Vitest.test("finds buttons by role with accessible-name options", () => {
     TestingLibrary.render(<App />)->ignore
-    Expect.expect(
-      TestingLibrary.getByRoleWith("button", {name: "Reset"}),
-    )->Expect.toBeInTheDocument
+    Expect.expect(TestingLibrary.getByRoleWith("button", {name: "Reset"}))->Expect.toBeInTheDocument
     Expect.expect(
       TestingLibrary.getByRoleWithRegex("button", {name: /Reset/}),
     )->Expect.toBeInTheDocument

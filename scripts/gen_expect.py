@@ -8,6 +8,7 @@ Usage:
 JS payloads (zero-cost). Run this after editing Vitest.res / JestDom.res.
 CI runs --check.
 """
+
 import difflib
 import re
 import sys
