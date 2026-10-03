@@ -1,0 +1,16 @@
+{
+  "name": "rescript-vitest-bindings",
+  "namespace": true,
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": {
+    "module": "esmodule",
+    "in-source": true
+  },
+  "suffix": ".res.mjs",
+  "dependencies": ["@rescript/react"],
+  "jsx": {"version": 4},
+  "compiler-flags": []
+}

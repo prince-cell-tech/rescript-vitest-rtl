@@ -1,0 +1,40 @@
+{
+  "name": "rescript-vitest-bindings",
+  "version": "0.1.0",
+  "description": "Zero-cost ReScript bindings for Vitest, @testing-library/react, and jest-dom",
+  "scripts": {
+    "res:build": "rescript",
+    "res:clean": "rescript clean",
+    "res:dev": "rescript watch",
+    "dev": "vite",
+    "build": "rescript && vite build",
+    "preview": "vite preview",
+    "test": "rescript && vitest run",
+    "test:watch": "vitest",
+    "bindings:check": "python3 scripts/gen_expect.py --check"
+  },
+  "keywords": [
+    "rescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "vitest": "^5.0.0"
+  },
+  "dependencies": {
+    "@rescript/react": "^0.15.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "rescript": "12.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.0.1",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.0"
+  }
+}

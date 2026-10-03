@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check Expect facade is in sync
+        run: npm run bindings:check
+
+      - name: Build ReScript
+        run: npx rescript
+
+      - name: Run tests
+        run: npx vitest run
+
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
