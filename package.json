@@ -16,7 +16,7 @@
   "keywords": [
     "rescript"
   ],
-  "author": "",
+  "author": "prince-cell-tech",
   "license": "MIT",
   "peerDependencies": {
     "@testing-library/jest-dom": "^7.0.1",
